@@ -1,6 +1,6 @@
 {
   "name": "@twilio-labs/svg-to-react",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A utility to convert raw svg files into accessible and extendable React Components.",
   "author": "Twilio Inc",
   "license": "MIT",
