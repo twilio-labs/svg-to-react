@@ -72,7 +72,7 @@ Please be aware that this project has a [Code of Conduct](https://github.com/twi
 
 ## Maintainers
 
-This project is maintained by the [design systems](https://github.com/orgs/twilio-labs/teams/design-systems) team.
+This project is maintained by the [design systems team](https://github.com/orgs/twilio-labs/teams/design-systems).
 
 
 ---

@@ -50,11 +50,13 @@ Example: `<CheckIcon color="red" size="24" />`
 ### Cons:
 - React only.
 
-### A note on performance
+# A note on performance
 
-You might think this approach is slower, and it is, but not by a significant margin.  If we load 100 of these SVGs on a single page (unlikely and extreme scenario), the data is as follows:
+Embedding a bunch of SVGs into the page isn't perceivably slower than image tags.  In terms of rendering speed, if we load 100 of these SVGs on a single page (an unlikely and extreme scenario), the data is as follows:
 
-- The image approach takes ~5ms
-- The SVG with props approach takes ~7ms
-
+- The image approach takes ~5ms to render.
+- The SVG with props approach takes ~7ms to render.
 [Please see this benchmark](https://github.com/TheSisb/svg-stress-test). 
+
+In terms of asset loading time, 'SVG as images' and 'SVG as React components' are far more suitable than a font file.  They 
+remove the need to maintain which icons exist in your project because only the used icons are bundled.  Further, if you use lazy loading for your icons, the gains are even greater to your initial bundle size.
