@@ -31,7 +31,7 @@ yarn convert
 ### NodeJS 
 ```js
 const fs = require('fs');
-const {convertSvgToReact} = require('@dsys/svg-to-react');
+const {convertSvgToReact} = require('@twilio-labs/svg-to-react');
 
 fs.readFile(`path/to/file`, 'utf8', async (err, fileContents) => {
     // TODO: Handle error case here
