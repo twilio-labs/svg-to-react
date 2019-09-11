@@ -26,9 +26,9 @@ const ${componentName} = ({title = '${pascalCaseWordSplitter(
 )}', decorative = true, className, color, size}: ${componentName}Props) => (
   <UID>
     {uid => (
-      <div style={{color, width: size, height: size}} className={className}>
+      <span style={{color, width: size, height: size, display: 'inline-block'}} className={className}>
         ${svg}
-      </div>
+      </span>
     )}
   </UID>
 );
@@ -57,9 +57,9 @@ const ${componentName} = React.memo(({title = '${pascalCaseWordSplitter(
 )}', decorative = true, className, color, size}: ${componentName}Props) => {
   const uid = useUID();
   return (
-    <div style={{color, width: size, height: size}} className={className}>
+    <span style={{color, width: size, height: size, display: 'inline-block'}} className={className}>
       ${svg}
-    </div>
+    </span>
   );
 });
 
