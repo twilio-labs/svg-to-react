@@ -77,7 +77,11 @@ This project is maintained by the [design systems team](https://github.com/orgs/
 
 ---
 
-# Demo
+## Example
+
+This project is used by [Twilio's internal design system](https://github.com/twilio-labs/paste/tree/master/packages/paste-icons). Check it out to see how we use a custom template to make this even more powerful.
+
+## Demo
 
 #### Input
 ```html
