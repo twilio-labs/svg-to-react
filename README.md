@@ -1,5 +1,5 @@
 <h1 align="center">@twilio-labs/svg-to-react</h1>
-<p align="center">A utility to convert raw svg files into accessible and extendable React Components. <a href="https://github.com/twilio-labs/svg-to-react/blob/master/RATIONALE.md">Why icon components?</a>.</p>
+<p align="center">A utility to convert raw SVG files into accessible and extendable React Components. <a href="https://github.com/twilio-labs/svg-to-react/blob/master/RATIONALE.md">Why icon components?</a>.</p>
 <p align="center">
 <a href="https://github.com/twilio-labs/.github/blob/master/CODE_OF_CONDUCT.md"><img alt="Code of Conduct" src="https://img.shields.io/badge/%F0%9F%92%96-Code%20of%20Conduct-blueviolet.svg?style=flat-square"></a> 
 <a href="http://makeapullrequest.com"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square" alt="PRs Welcome" /></a>
@@ -67,7 +67,7 @@ This project welcomes contributions from the community.
 
 ## Code of Conduct
 
-Please be aware that this project has a [Code of Conduct](https://github.com/twilio-labs/.github/blob/master/CODE_OF_CONDUCT.md). The tldr; is to just be excellent to each other ❤️
+Please be aware that this project has a [Code of Conduct](https://github.com/twilio-labs/.github/blob/master/CODE_OF_CONDUCT.md). The tl;dr is to just be excellent to each other ❤️
 
 
 ## Maintainers
