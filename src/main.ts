@@ -1,12 +1,12 @@
 import svgr from '@svgr/core';
 import {format, resolveConfig} from 'prettier';
 import {config} from './config';
-import {fileTemplateReactDefault, fileTemplateReactHooks, IFileTemplateArgs} from './templates';
+import {fileTemplateReactDefault, fileTemplateReactHooks, FileTemplateArgs} from './templates';
 import {fileNameToComponentName, removeLastCharacter} from './utils';
 
-interface IOptions {
+interface Options {
   useHooks: boolean;
-  template?: ({componentName, svg}: IFileTemplateArgs) => string;
+  template?: ({componentName, svg}: FileTemplateArgs) => string;
 }
 
 const DEFAULT_OPTIONS = {
@@ -17,7 +17,7 @@ const DEFAULT_OPTIONS = {
 export async function convertSvgToReact(
   svgName: string,
   svgData: string,
-  options: IOptions = DEFAULT_OPTIONS
+  options: Options = DEFAULT_OPTIONS
 ): Promise<string> {
   const componentName = fileNameToComponentName(svgName);
 

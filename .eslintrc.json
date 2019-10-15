@@ -1,0 +1,46 @@
+{
+    "env": {
+        "commonjs": true,
+        "es6": true,
+        "node": true
+    },
+    "extends": [
+        "eslint:recommended",
+        "plugin:import/recommended",
+        "plugin:@typescript-eslint/eslint-recommended",
+        "plugin:@typescript-eslint/recommended",
+        "prettier",
+        "prettier/@typescript-eslint"
+    ],
+    "globals": {
+        "Atomics": "readonly",
+        "SharedArrayBuffer": "readonly"
+    },
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 2018
+    },
+    "plugins": [
+        "prettier",
+        "@typescript-eslint"
+    ],
+    "settings": {
+        "import/parsers": {
+            "@typescript-eslint/parser": [".ts", ".tsx"]
+          },
+          "import/resolver": {
+            "typescript": {
+                "alwaysTryTypes": true 
+            }
+        }
+    },
+    "rules": {
+        "no-useless-escape": "off",
+        "@typescript-eslint/explicit-function-return-type" : "off",
+        "@typescript-eslint/no-explicit-any": "off"
+    }
+
+}

@@ -1,12 +1,12 @@
 // Note on a11y: https://css-tricks.com/can-make-icon-system-accessible/
 import {pascalCaseWordSplitter} from './utils';
 
-export interface IFileTemplateArgs {
+export interface FileTemplateArgs {
   componentName: string;
   svg: string;
 }
 
-export const fileTemplateReactDefault = ({componentName, svg}: IFileTemplateArgs): string => `
+export const fileTemplateReactDefault = ({componentName, svg}: FileTemplateArgs): string => `
 /**!
  * This file was automatically generated with @twilio-labs/svg-to-react
  */
@@ -37,7 +37,7 @@ const ${componentName} = ({title = '${pascalCaseWordSplitter(
 export default ${componentName};
 `;
 
-export const fileTemplateReactHooks = ({componentName, svg}: IFileTemplateArgs): string => `
+export const fileTemplateReactHooks = ({componentName, svg}: FileTemplateArgs): string => `
 /**!
  * This file was automatically generated with @twilio-labs/svg-to-react
  */
