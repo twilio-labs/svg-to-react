@@ -25,7 +25,7 @@ const ${componentName} = ({title = '${pascalCaseWordSplitter(
   componentName
 )}', decorative = true, className, color, size}: ${componentName}Props) => (
   <UID>
-    {uid => (
+    {titleId => (
       <span style={{color, width: size, height: size, display: 'inline-block'}} className={className}>
         ${svg}
       </span>
@@ -55,7 +55,7 @@ export interface ${componentName}Props {
 const ${componentName} = React.memo(({title = '${pascalCaseWordSplitter(
   componentName
 )}', decorative = true, className, color, size}: ${componentName}Props) => {
-  const uid = useUID();
+  const titleId = useUID();
   return (
     <span style={{color, width: size, height: size, display: 'inline-block'}} className={className}>
       ${svg}
@@ -66,8 +66,7 @@ const ${componentName} = React.memo(({title = '${pascalCaseWordSplitter(
 export default ${componentName};
 `;
 
-// SVGR's templating is super bad (can be seen by the amount of issues on github pertaining to it), so I
-// do a very minimal pass here and use my own template defined above.
+// I do a very minimal pass here and use my own templates defined above.
 export const svgTemplate = (
   {template}: any,
   _opts: {},
