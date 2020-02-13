@@ -31,13 +31,19 @@ export interface AutomaticIconProps {
 
 const AutomaticIcon = ({title = 'Automatic Icon', decorative = true, className, color, size}: AutomaticIconProps) => (
   <UID>
-    {uid => (
+    {titleId => (
       <span style={{color, width: size, height: size, display: 'inline-block'}} className={className}>
-        <svg role=\"img\" aria-hidden={decorative} aria-labelledby={uid} height=\"100%\" width=\"100%\" viewBox=\"0 0 24 24\">
-          <title id={uid}>{title}</title>
+        <svg
+          role="img"
+          aria-hidden={decorative}
+          height="100%"
+          width="100%"
+          viewBox="0 0 24 24"
+          aria-labelledby={titleId}>
+          {title ? <title id={titleId}>{title}</title> : null}
           <path
-            fill=\"currentColor\"
-            d=\"M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm0 18c-4.4 0-8-3.6-8-8s3.6-8 8-8 8 3.6 8 8-3.6 8-8 8zm2.3-4.7H16L12.9 8h-1.7L8 15.3h1.7l.6-1.4h3.4l.6 1.4zm-3.5-2.7L12 9.7l1.2 2.8h-2.4v.1z\"
+            fill="currentColor"
+            d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm0 18c-4.4 0-8-3.6-8-8s3.6-8 8-8 8 3.6 8 8-3.6 8-8 8zm2.3-4.7H16L12.9 8h-1.7L8 15.3h1.7l.6-1.4h3.4l.6 1.4zm-3.5-2.7L12 9.7l1.2 2.8h-2.4v.1z"
           />
         </svg>
       </span>
@@ -69,11 +75,17 @@ export interface AutomaticIconProps {
 
 const AutomaticIcon = React.memo(
   ({title = 'Automatic Icon', decorative = true, className, color, size}: AutomaticIconProps) => {
-    const uid = useUID();
+    const titleId = useUID();
     return (
       <span style={{color, width: size, height: size, display: 'inline-block'}} className={className}>
-        <svg role="img" aria-hidden={decorative} aria-labelledby={uid} height="100%" width="100%" viewBox="0 0 24 24">
-          <title id={uid}>{title}</title>
+        <svg
+          role="img"
+          aria-hidden={decorative}
+          height="100%"
+          width="100%"
+          viewBox="0 0 24 24"
+          aria-labelledby={titleId}>
+          {title ? <title id={titleId}>{title}</title> : null}
           <path
             fill="currentColor"
             d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm0 18c-4.4 0-8-3.6-8-8s3.6-8 8-8 8 3.6 8 8-3.6 8-8 8zm2.3-4.7H16L12.9 8h-1.7L8 15.3h1.7l.6-1.4h3.4l.6 1.4zm-3.5-2.7L12 9.7l1.2 2.8h-2.4v.1z"

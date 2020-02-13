@@ -61,12 +61,6 @@ const config = {
                 position: 'start',
               },
               {
-                name: 'aria-labelledby',
-                value: `uid`,
-                literal: true,
-                position: 'start',
-              },
-              {
                 name: 'aria-hidden',
                 value: 'decorative',
                 literal: true,
@@ -80,24 +74,6 @@ const config = {
             ],
           },
           'add-width-and-height',
-        ],
-        /*
-         * Modify <title> tag to add unique ID
-         */
-        [
-          '@svgr/babel-plugin-add-jsx-attribute',
-          {
-            elements: ['title'],
-            attributes: [
-              {
-                name: 'id',
-                value: 'uid',
-                literal: true,
-                position: 'start',
-              },
-            ],
-          },
-          'add-title-aria-label',
         ],
       ],
     },
