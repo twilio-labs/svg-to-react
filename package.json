@@ -33,7 +33,7 @@
     "@svgr/plugin-prettier": "^5.0.1",
     "@svgr/plugin-svgo": "^5.1.0",
     "prettier": "^1.19.1",
-    "tslib": "^1.10.0"
+    "tslib": "^2.0.0"
   },
   "devDependencies": {
     "@types/jest": "^25.1.2",
