@@ -66,6 +66,36 @@ const ${componentName} = React.memo(({title = '${pascalCaseWordSplitter(
 export default ${componentName};
 `;
 
+export const fileTemplateReactForwardRef = ({componentName, svg}: FileTemplateArgs): string => `
+/**
+ * This file was automatically generated with @twilio-labs/svg-to-react
+ */
+import * as React from 'react';
+import {useUID} from 'react-uid';
+
+export interface ${componentName}Props {
+  className?: string,
+  size?: number,
+  color?: string,
+  title?: string;
+  decorative?: boolean;
+}
+
+const ${componentName} = React.forwardRef<HTMLElement, ${componentName}Props>(({title = '${pascalCaseWordSplitter(
+  componentName
+)}', decorative = true, className, color, size}, ref) => {
+  const titleId = useUID();
+
+  return (
+    <span style={{color, width: size, height: size, display: 'inline-block'}} className={className} ref={ref}>
+      ${svg}
+    </span>
+  );
+});
+
+export default ${componentName};
+`;
+
 // I do a very minimal pass here and use my own templates defined above.
 export const svgTemplate = (
   {template}: any,
